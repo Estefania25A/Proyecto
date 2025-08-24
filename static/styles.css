@@ -1,0 +1,85 @@
+/* Fuente moderna y colores suaves */
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff0f6; /* rosita muy suave */
+  color: #444;
+}
+
+/* Header y navegación */
+.site-header {
+  background: linear-gradient(90deg, #ff80ab, #ba68c8);
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffe082;
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #d81b60; /* rosa fuerte */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Botón bonito */
+button, .btn {
+  background: #f48fb1;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: #ec407a;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(90deg, #ba68c8, #ff80ab);
+  color: white;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
