@@ -1,85 +1,85 @@
-/* Fuente moderna y colores suaves */
 body {
-  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff0f6; /* rosita muy suave */
-  color: #444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    margin: 0;
+    padding: 0;
 }
 
-/* Header y navegación */
-.site-header {
-  background: linear-gradient(90deg, #ff80ab, #ba68c8);
-  padding: 15px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.nav {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.nav a:hover {
-  color: #ffe082;
-  text-decoration: underline;
-}
-
-/* Contenedor principal */
 .container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: center;
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 h1 {
-  color: #d81b60; /* rosa fuerte */
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-/* Botón bonito */
-button, .btn {
-  background: #f48fb1;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
 }
 
-button:hover, .btn:hover {
-  background: #ec407a;
+th {
+    background: #f8cdda;
+    color: #333;
 }
 
-/* Footer */
-.site-footer {
-  text-align: center;
-  padding: 15px;
-  background: linear-gradient(90deg, #ba68c8, #ff80ab);
-  color: white;
-  margin-top: 50px;
-  font-size: 0.9rem;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+tr:nth-child(even) {
+    background: #fdf1f7;
+}
+
+.btn {
+    display: inline-block;
+    background: #d63384;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a61e6b;
+}
+
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #a71d2a;
+}
+
+.btn-cancel {
+    background: #6c757d;
+}
+
+.btn-cancel:hover {
+    background: #565e64;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }

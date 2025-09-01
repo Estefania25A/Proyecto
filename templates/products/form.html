@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Nuevo producto' if modo=='crear' else 'Editar producto' }} · La Suite{% endblock %}
+{% block content %}
+
+<h1>{{ 'Agregar Producto' if modo=='crear' else 'Editar Producto' }}</h1>
+
+<form method="post" class="form">
+  <label>Nombre</label>
+  <input type="text" name="nombre" value="{{ form.nombre or '' }}" required>
+
+  <label>Cantidad</label>
+  <input type="number" name="cantidad" min="0" value="{{ form.cantidad or '' }}" required>
+
+  <label>Precio</label>
+  <input type="number" name="precio" step="0.01" min="0" value="{{ form.precio or '' }}" required>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn" href="{{ url_for('listar_productos') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

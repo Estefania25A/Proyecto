@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>➕ Agregar Producto</h1>
+        <form method="POST">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>Cantidad:</label>
+            <input type="number" name="cantidad" required>
+
+            <label>Precio:</label>
+            <input type="number" step="0.01" name="precio" required>
+
+            <label>Descripción:</label>
+            <textarea name="descripcion"></textarea>
+
+            <button type="submit" class="btn-add">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
