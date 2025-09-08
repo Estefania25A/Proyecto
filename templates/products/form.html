@@ -1,22 +1,30 @@
-{% extends "base.html" %}
-{% block title %}{{ 'Nuevo producto' if modo=='crear' else 'Editar producto' }} · La Suite{% endblock %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>➕ Agregar Producto</h2>
+        <form method="post">
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" required><br><br>
 
-<h1>{{ 'Agregar Producto' if modo=='crear' else 'Editar Producto' }}</h1>
+            <label>Cantidad:</label><br>
+            <input type="number" name="cantidad" required><br><br>
 
-<form method="post" class="form">
-  <label>Nombre</label>
-  <input type="text" name="nombre" value="{{ form.nombre or '' }}" required>
+            <label>Precio:</label><br>
+            <input type="number" step="0.01" name="precio" required><br><br>
 
-  <label>Cantidad</label>
-  <input type="number" name="cantidad" min="0" value="{{ form.cantidad or '' }}" required>
+            <label>Descripción:</label><br>
+            <textarea name="descripcion"></textarea><br><br>
 
-  <label>Precio</label>
-  <input type="number" name="precio" step="0.01" min="0" value="{{ form.precio or '' }}" required>
-
-  <div class="form-actions">
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <a class="btn" href="{{ url_for('listar_productos') }}">Cancelar</a>
-  </div>
-</form>
-{% endblock %}
+            <button type="submit" class="btn-add">Guardar</button>
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}" class="btn-back">⬅ Volver</a>
+    </div>
+</body>
+</html>
