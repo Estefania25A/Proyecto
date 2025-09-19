@@ -1,0 +1,19 @@
+<h2>Productos disponibles</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in productos %}
+    <tr>
+      <td>{{ p.id_producto }}</td>
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.precio }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

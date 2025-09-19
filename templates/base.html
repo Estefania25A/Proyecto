@@ -1,29 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>{% block title %}My Suite{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>{% block title %}La Suite{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-  <nav class="nav">
-    <a href="{{ url_for('home') }}">Inicio</a>
-    <a href="{{ url_for('listar_productos') }}">Inventario</a>
-    <a href="{{ url_for('about') }}">Acerca de</a>
-  </nav>
+<body class="bg-light">
 
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      <div class="flash">
-        {% for cat, msg in messages %}
-          <div class="flash-item {{ cat }}">{{ msg }}</div>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% endwith %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">La Suite</a>
+    <div>
+      <a class="nav-link text-white" href="/usuarios">Usuarios</a>
+      <a class="nav-link text-white" href="/productos">Productos</a>
+      <a class="nav-link text-white" href="/about">Acerca de</a>
+    </div>
+  </div>
+</nav>
 
-  <main class="container">
+<div class="container mt-4">
     {% block content %}{% endblock %}
-  </main>
+</div>
+
 </body>
 </html>

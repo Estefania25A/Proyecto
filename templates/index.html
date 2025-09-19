@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Inventario - La Suite 👗✨</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Inventario - <span>La Suite 👗✨</span></h1>
-        <a href="{{ url_for('add') }}" class="btn-add">➕ Agregar Producto</a>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Descripción</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for producto in productos %}
-                <tr>
-                    <td>{{ producto[0] }}</td>
-                    <td>{{ producto[1] }}</td>
-                    <td>{{ producto[2] }}</td>
-                    <td>${{ producto[3] }}</td>
-                    <td>{{ producto[4] }}</td>
-                    <td>
-                        <form action="{{ url_for('delete', id=producto[0]) }}" method="post">
-                            <button type="submit" class="btn-delete">🗑 Eliminar</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a La Suite 👗🧥</h1>
+    <p class="lead">Sistema de inventario de ropa</p>
+</div>
+{% endblock %}
+
