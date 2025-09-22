@@ -1,3 +1,16 @@
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, DecimalField, SubmitField
+from wtforms.validators import DataRequired, NumberRange
+
+# --- Formulario con FlaskForm (para /productos/nuevo y /productos/editar) ---
+class ProductoForm(FlaskForm):
+    nombre = StringField('Nombre', validators=[DataRequired()])
+    cantidad = IntegerField('Cantidad', validators=[DataRequired(), NumberRange(min=0)])
+    precio = DecimalField('Precio', validators=[DataRequired(), NumberRange(min=0)])
+    submit = SubmitField('Guardar')
+
+
+# --- Función auxiliar (si quieres validar a mano con request.form) ---
 def parse_producto_form(form):
     """
     Valida y convierte los campos del formulario de producto.
